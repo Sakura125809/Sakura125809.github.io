@@ -1,0 +1,31 @@
+title: "Sakura."
+author: Sakura
+description: "一处安放代码、灵感与日常的地方。保持好奇，慢慢生长。"
+url: "https://zqliu.me"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+github_url: "https://github.com/Sakura125809"
+repository_url: "https://github.com/Sakura125809/Sakura125809.github.io"
+permalink: /writing/:title/
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Sakura
+exclude: [Gemfile, Gemfile.lock, README.md, scripts, tests, vendor, .github, LICENSE]

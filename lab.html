@@ -1,0 +1,8 @@
+---
+layout: default
+title: "实验室"
+section: lab
+permalink: /lab/
+description: "在代码与偶然之间，做一些可以触碰的小实验。"
+---
+<section class="page-heading"><h1>给想法，<span class="serif-accent">一点空间。</span></h1><p>不急着寻找用途，先看看会发生什么。</p></section><section class="lab-workbench" aria-labelledby="flower-title"><div class="lab-art-container">{% include art.html %}</div><div class="lab-controls"><span class="section-number">EXPERIMENT / 001</span><h2 id="flower-title">一朵花的算法</h2><p>重复一条曲线，旋转一点角度。<br>秩序与偶然之间，花就开了。</p><p class="lab-explanation">改变种子，生成不同的形态。所有计算都在你的浏览器里完成。</p><fieldset class="art-inputs" disabled><legend class="sr-only">生成艺术控制</legend><label for="art-seed">随机种子 <output id="seed-value" for="art-seed">42</output></label><input id="art-seed" type="range" min="1" max="99" value="42"><div class="lab-buttons"><button class="button button-primary" id="regenerate" type="button">再开一朵 {% include icon.html name="refresh" %}</button><button class="button button-outline" id="save-art" type="button">保存图片 {% include icon.html name="download" %}</button></div></fieldset><p class="lab-hint" id="art-status" role="status">移动滑块，看看新的形态。</p><noscript><p>交互实验需要 JavaScript。其他页面仍可正常阅读。</p></noscript></div></section><section class="project-section"><div class="section-heading"><div><span class="section-number">OPEN SOURCE</span><h2>这个站，也是一件作品。</h2></div></div><a class="project-row" href="{{ site.repository_url }}" target="_blank" rel="noopener noreferrer"><span class="project-index mono">01</span><div><h3>Sakura. / 个人博客</h3><p>轻量的文字空间，带一点生成艺术。由 Jekyll 和 GitHub Pages 驱动。</p><span class="project-stack mono">JEKYLL · CSS · JAVASCRIPT</span></div>{% include icon.html name="external" %}</a><p class="project-note">新的实验会陆续放在这里。不用一次装满。</p></section>

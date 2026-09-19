@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f8f7f4">
+{% seo %}
+{% feed_meta %}
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+<script>try{var t=localStorage.getItem('sakura-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<script src="{{ '/assets/site.js' | relative_url }}" defer></script><script src="{{ '/assets/art.js' | relative_url }}" defer></script>
+</head>
+<body data-search-url="{{ '/search.json' | relative_url }}">
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="header wrap"><a class="brand" href="{{ '/' | relative_url }}" aria-label="Sakura 首页">{% include icon.html name="flower" %}<span>Sakura<span class="brand-dot">.</span></span></a><nav class="nav" id="site-nav" aria-label="主导航"><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>首页</a><a href="{{ '/writing/' | relative_url }}" {% if page.section == 'writing' or page.layout == 'post' %}aria-current="page"{% endif %}>文字</a><a href="{{ '/lab/' | relative_url }}" {% if page.section == 'lab' %}aria-current="page"{% endif %}>实验室</a><a href="{{ '/about/' | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>关于</a></nav><div class="header-tools"><button class="icon-button search-toggle" type="button" aria-label="搜索文章（Command 或 Control 加 K）" aria-haspopup="dialog" hidden>{% include icon.html name="search" %}</button><button class="icon-button theme-toggle" type="button" aria-label="切换配色" hidden>{% include icon.html name="sun" %}</button><button class="icon-button menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="展开导航" hidden>{% include icon.html name="menu" %}</button></div></header>
+<main id="main" class="wrap" tabindex="-1">{{ content }}</main>
+<footer class="footer wrap"><div><a class="footer-name" href="{{ '/' | relative_url }}">Sakura.</a><p>保持好奇，慢慢生长。</p></div><div class="footer-links"><a href="{{ site.github_url }}" target="_blank" rel="noopener noreferrer">GitHub {% include icon.html name="external" %}</a><a href="{{ '/feed.xml' | relative_url }}">RSS {% include icon.html name="rss" %}</a><a href="{{ '/about/#this-site' | relative_url }}">关于本站</a></div><div class="footer-bottom"><span>© {{ site.time | date: '%Y' }} Sakura · 文字与代码，都有温度。</span><span>BUILT WITH CURIOSITY <span class="tiny-flower" aria-hidden="true">✳</span></span></div></footer>
+<dialog class="search-dialog" aria-labelledby="search-heading"><div class="search-top"><h2 id="search-heading">找一段文字</h2><button class="icon-button search-close" type="button" aria-label="关闭搜索">{% include icon.html name="close" %}</button></div><label class="sr-only" for="search-input">搜索标题、标签和正文</label><input id="search-input" type="search" placeholder="输入关键词，例如：Markdown" autocomplete="off" maxlength="100"><p id="search-status" class="search-status" role="status" aria-live="polite">输入关键词，寻找一段文字。</p><ul id="search-results" class="search-results"></ul><div class="search-bottom"><span>站内搜索 · 不发送到第三方</span><kbd>ESC 关闭</kbd></div></dialog>
+</body></html>

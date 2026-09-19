@@ -1,0 +1,8 @@
+---
+layout: default
+title: "文字"
+section: writing
+permalink: /writing/
+description: "代码、灵感与日常的文字归档。"
+---
+<section class="page-heading"><h1>文字，<span class="serif-accent">慢慢积累。</span></h1><p>把零散的想法，留给未来的自己。</p></section><div class="archive-toolbar"><div class="tag-filters" aria-label="按标签筛选文章" hidden><button class="filter active" type="button" data-filter="" aria-pressed="true">全部 <span>{{ site.posts | size }}</span></button>{% assign sorted_tags = site.tags | sort %}{% for tag in sorted_tags %}<button class="filter" type="button" data-filter="{{ tag[0] | escape }}" aria-pressed="false">{{ tag[0] | escape }} <span>{{ tag[1] | size }}</span></button>{% endfor %}</div><span class="archive-count mono">{{ site.posts | size }} 篇文字</span></div><div class="post-list archive-posts">{% for post in site.posts %}{% include post-row.html post=post %}{% endfor %}</div><p class="empty-state filter-empty" role="status" hidden>这个标签下还没有文字。试试「全部」吧。</p>
